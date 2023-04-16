@@ -4,15 +4,13 @@ import Notiflix from 'notiflix';
 
 const dateTimeEl = document.querySelector('#datetime-picker');
 const btnStart = document.querySelector('[data-start]');
-const btnStop = document.querySelector('[data-stop]');
-const btnReset = document.querySelector('[data-reset]');
 const days = document.querySelector('[data-days]');
 const hours = document.querySelector('[data-hours]');
 const minutes = document.querySelector('[data-minutes]');
 const seconds = document.querySelector('[data-seconds]');
 
+
 btnStart.disabled = true;
-btnStop.disabled = true;
 
 let userDate;
 const actualDate = new Date();
@@ -47,15 +45,8 @@ const counterTime = () => {
   }, 1000);
 };
 
-const stopp = () => {
-  btnStart.disabled = false;
-  btnStop.disabled = true;
-  clearInterval(counter);
-};
-
 const dateTime = flatpickr(dateTimeEl, options);
 btnStart.addEventListener('click', counterTime);
-btnStop.addEventListener('click', stopp);
 
 const time = gapTimeMs => {
   days.textContent = gapTimeMs.days;

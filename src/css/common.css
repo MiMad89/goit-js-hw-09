@@ -86,3 +86,13 @@ button:hover {
   line-height: 1.875;
   letter-spacing: 0.06em;
 }
+
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: end;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+}
